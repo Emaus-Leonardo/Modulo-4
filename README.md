@@ -1,6 +1,4 @@
-# Projeto de API com Express e MySQL
-
-Este projeto é uma API simples construída com Node.js, Express e MySQL. A API inclui rotas para verificar a "liveness" (vivacidade) e "readiness" (prontidão) do aplicativo, além de uma rota para consultar dados em um banco de dados MySQL.
+# Aplicação em docker
 
 ## Requisitos
 
