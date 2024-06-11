@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get("/liveness", (req, res) => {
-  return res.status(200).json({
+  const response = {
     message: "Meu app está vivo!",
     timestamp: new Date().toISOString(),
     version: "1.0.0",
@@ -17,9 +17,17 @@ app.get("/liveness", (req, res) => {
     status: "UP",
     path: process.cwd(),
     port: port,
-    uid: process.getuid(),
-    gid: process.getgid(),
-  });
+  };
+
+  if (typeof process.getuid === 'function') {
+    response.uid = process.getuid();
+  }
+
+  if (typeof process.getgid === 'function') {
+    response.gid = process.getgid();
+  }
+
+  return res.status(200).json(response);
 });
 
 app.get("/readiness", (req, res) => {
