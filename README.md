@@ -1,53 +1,36 @@
-# Aplicação em docker
+# Passos para utilização 
 
-## Requisitos
+## puxar o container do DockerHub
 
-- Node.js v12 ou superior
-- MySQL
-- npm (gerenciador de pacotes do Node.js)
+docker pull emaus9825/trabalho:0.0.1
 
-## Instalação
+## Para criar o banco de dados, rode os scripts a baixo:
 
-1. **Clone o repositório**:
+CREATE TABLE `produto` (
+  `codigo` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `preco` varchar(1000) NOT NULL,
+  `descricao` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-   ```bash
-   https://github.com/Emaus-Leonardo/Modulo-4.git
+## Para inserir dados na tabela
 
-2. Instale as dependências:
+INSERT INTO `produto` (`codigo`, `nome`, `preco`, `descricao`) VALUES
+(1, 'ração de gato', '1', 'ração especial para gatos');
 
-   ```bash
-      npm install
+# Para executar a aplicação, rode o comando abaixo:
 
-3. inicie o servidor
+docker run -p 3000:3000 --name modulo4 -d emaus9825/trabalho:0.0.1
 
-   ```bash
-      npm start
-   
-5. Rotas da API:
+#Acesse http://localhost:3000/consulta-dados
 
-   ```bash
-      GET /liveness
-   ```
-   
-   ```bash
-      GET /readiness
-   ```
-   
-   ```bash
-      GET /consulta-dados
-   ```
+A aplicação possui os seguintes end-points:
+/consulta-dados,
+/readiness,
+/liveness
 
-6. Estrutura do Projeto
+Repositório da aplicação: <br/>
+https://github.com/Emaus-Leonardo/Modulo-4.git
 
-   ```bash
-   ├── node_modules
-   │   └── ...
-   ├── .dockerignore
-   ├── .gitignore
-   ├── app.js
-   ├── conexao.js
-   ├── Dockerfile
-   ├── package-lock.json
-   ├── package.json
-   └── produto.sql
-   ```
+DockerHub da Aplicação: <br/>
+https://hub.docker.com/repository/docker/emaus9825/trabalho
