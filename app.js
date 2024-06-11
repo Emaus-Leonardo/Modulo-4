@@ -1,9 +1,6 @@
 import express from "express";
 import os from "os";
-import dotenv from "dotenv";
 import connect from "./conexao.js"; 
-
-dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
