@@ -1,0 +1,20 @@
+{
+  "name": "modulo-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "start",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "modulo4"
+  ],
+  "author": "emaús leonardo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.10.0",
+    "nodemon": "^3.1.3"
+  }
+}
