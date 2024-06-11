@@ -13,8 +13,7 @@ Este projeto é uma API simples construída com Node.js, Express e MySQL. A API 
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   https://github.com/Emaus-Leonardo/Modulo-4.git
 
 2. Instale as dependências:
 
