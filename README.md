@@ -6,9 +6,9 @@ docker pull emaus9825/atv-4:0.0.1
 
 ## criar o network e o banco
 
-docker run -d -p 3306:3306 --name mysql --net banco -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=user -e MYSQL_PASSWORD=9825 -e MYSQL_DATABASE=dockertestedb mysql/mysql-server:latest
-
 docker network create banco
+
+docker run -d -p 3306:3306 --name mysql --net banco -e MYSQL_ROOT_PASSWORD=root -e MYSQL_USER=user -e MYSQL_PASSWORD=9825 -e MYSQL_DATABASE=dockertestedb mysql/mysql-server:latest
 
 ## Para criar o banco de dados, rode os scripts a baixo:
 
