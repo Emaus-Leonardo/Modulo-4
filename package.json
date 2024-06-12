@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "start",
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [
     "modulo4"

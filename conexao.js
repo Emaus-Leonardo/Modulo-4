@@ -6,9 +6,9 @@ export default async function connect() {
     }
 
     const conexao = await mysql.createConnection({
-        host: "localhost",
-        user: "root",
-        password: "",
+        host: "mysql",
+        user: "user",
+        password: "9825",
         database: "dockertestedb",
     });
 
